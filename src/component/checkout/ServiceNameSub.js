@@ -2,16 +2,13 @@ import React, { useState } from "react";
 import { Input } from "reactstrap";
 import { SerNm, SerPrice, SerSubCol, SerSubMain, SerSubRow, SerTitle } from "../../Style/LayoutStyle";
 
-export default function ServiceNameSub({ data }) {
-  const [radioData, setRadioData] = useState(data.find(d => d.type === "radioButton"))
-  console.log("data", radioData)
-
+export default function ServiceNameSub({ data,title }) {
   return (
     <>
       <SerSubMain>
-        <SerTitle>{radioData.title}</SerTitle>
+        <SerTitle>{title}</SerTitle>
         {
-          radioData.data.map(d => {
+          data.map(d => {
             return (
               <SerSubRow>
                 <SerSubCol>

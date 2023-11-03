@@ -12,15 +12,13 @@ import {
   SoptPrice,
 } from "../../Style/LayoutStyle";
 
-export default function ServiceOpt({ data }) {
-  const [checkBoxData, setCheckBoxData] = useState(data.find(d => d.type === "checkBox"))
-  console.log("checkBoxData",checkBoxData)
+export default function ServiceOpt({ data,title }) {
   return (
     <>
       <SerOptMain>
-        <SerTitle>{checkBoxData.title}</SerTitle>
+        <SerTitle>{title}</SerTitle>
         {
-          checkBoxData.data.map(d => {
+          data.map(d => {
             return (
               <SerOtpSubRow>
                 <SerOtpSubCol>
