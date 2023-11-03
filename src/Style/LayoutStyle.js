@@ -36,6 +36,7 @@ export const SerTitle = styled.div`
 `;
 export const SerSubRow = styled.div`
   display: flex;
+  margin-bottom: 25px;
   justify-content: space-between;
 `;
 export const SerSubCol = styled.div`
